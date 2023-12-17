@@ -15,7 +15,7 @@ public class Canton {
     private Integer idCanton;
     private String nombreCanton;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "idProvincia")
     private Provincia provincia;
 }

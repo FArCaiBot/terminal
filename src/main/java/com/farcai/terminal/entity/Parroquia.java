@@ -14,7 +14,7 @@ public class Parroquia {
     private Integer idParroquia;
     private String nombreParroquia;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "idCanton")
     private Canton canton;
 }
