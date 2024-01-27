@@ -30,7 +30,7 @@ class ProvinciaServiceImplTest {
         Provincia carchi = provinciaService.findById(id);
         //then
         assertNotNull(carchi);
-        assertEquals(id, carchi.getId());
+        assertEquals(id, carchi.getIdProvincia());
     }
 
     @Test

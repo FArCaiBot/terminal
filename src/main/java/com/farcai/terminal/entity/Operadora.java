@@ -27,6 +27,4 @@ public class Operadora {
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime fechaCreacion;
-
-
 }
