@@ -31,7 +31,7 @@ public class OperadoraServiceImpl implements OperadoraService {
 
     @Override
     public Operadora guardar(String nombreOperadora, MultipartFile logo) {
-        Operadora operadora=new Operadora();
+        Operadora operadora = new Operadora();
         operadora.setNombreOperadora(nombreOperadora);
         try {
             String linkLogo = cloudinaryService.uploadFile(logo);
@@ -52,5 +52,12 @@ public class OperadoraServiceImpl implements OperadoraService {
         operadoraDb.setNombreOperadora(nombreOperadora);
         operadoraDb.setLogotipo(newFile);
         return operadoraRepository.save(operadoraDb);
+    }
+
+    @Override
+    public Operadora obtenerPorId(Integer idOperadora) {
+        return operadoraRepository.findById(idOperadora).orElseThrow(
+                () -> new ResourceNotFoundException("Operadora", "id", idOperadora.toString())
+        );
     }
 }

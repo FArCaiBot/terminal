@@ -18,5 +18,4 @@ public class Dia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDia;
     private String nombreDia;
-
 }

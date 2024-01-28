@@ -23,6 +23,6 @@ public class HorarioAtencion {
     private Dia dia;
 
     private LocalTime horaApertura;
-    private LocalTime horaCierra;
+    private LocalTime horaCierre;
 
 }

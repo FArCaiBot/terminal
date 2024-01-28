@@ -13,4 +13,6 @@ public interface OperadoraService {
     Operadora guardar(String nombreOperadora, MultipartFile logo);
 
     Operadora actualizar(MultipartFile logo, String nombreOperadora, Integer idOperadora);
+
+    Operadora obtenerPorId(Integer idOperadora);
 }

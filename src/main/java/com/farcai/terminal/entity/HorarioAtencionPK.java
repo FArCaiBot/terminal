@@ -12,8 +12,6 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class HorarioAtencionPK implements Serializable {
 
-
-
     @ManyToOne
     @JoinColumn(name = "idOperadora",nullable = false)
     private Operadora operadora;
